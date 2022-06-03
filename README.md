@@ -1,40 +1,57 @@
-<p align="center"><img src="https://statamic.com/assets/branding/Statamic-Logo+Wordmark-Rad.svg" width="400" alt="Statamic Logo" /></p>
+# DDEV statamic
 
-## About Statamic 3
+Status: WIP
 
-Statamic 3 is the flat-first, Laravel + Git powered CMS designed for building beautiful, easy to manage websites.
+[Statamic CMS](https://statamic.dev/) meets [DDEV](https://ddev.com/) & [Gitpod](https://gitpod.io/).
 
-> **Note:** This repository contains the code for the Statamic application. To contribute to the core package, visit the [Statamic core package repository][cms-repo].
+**Launch in your browser via Gitpod:**
 
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/mandrasch/ddev-statamic-blank/)
 
-## Learning Statamic
+## Local setup after clone
 
-Statamic 3 has extensive [documentation][docs]. We dedicate a significant amount of time and energy every day to improving them, so if something is unclear, feel free to open issues for anything you find confusing or incomplete. We are happy to consider anything you feel will make the docs and CMS better.
+1. `ddev composer install`
+1. `ddev exec cp .env.example .env`
+1. `ddev artisan key:generate`
+1. `ddev launch`
+1. Create admin user: `ddev please make:user`
+1. Launch backend: `ddev launch /cp`
 
-## Support
+## How was this created?
 
-We provide official developer support on [Statamic 3 Pro](https://statamic.com/pricing) projects. Community-driven support is available on the [forum](https://statamic.com/forum) and in [Discord][discord].
+```bash
+ddev config --project-type=laravel --docroot=public --create-docroot
+ddev composer create statamic/statamic
+ddev exec cp .env.example .env
+ddev artisan key:generate
+ddev launch
+```
 
+Set the APP_URL to ddev project URL in .env, e.g. `APP_URL=https://ddev-statamic-blank.ddev.site`
 
-## Contributing
+Support of the please command was added in `.ddev/commands/web/please`.
 
-Thank you for considering contributing to Statamic! We simply ask that you review the [contribution guide][contribution] before you open issues or send pull requests.
+Create first user:
 
+```bash
+ddev please make:user
+ddev launch /cp
+```
 
-## Code of Conduct
+Technical details:
 
-In order to ensure that the Statamic community is welcoming to all and generally a rad place to belong, please review and abide by the [Code of Conduct](https://github.com/statamic/cms/wiki/Code-of-Conduct).
+-   `ddev composer create` is a wrapper around `composer create-project` which moves the files to the project root folder automatically after install
 
+## TODOs:
 
-## Important Links
+-   [ ] Add https://github.com/tyler36/ddev-browsersync#laravel-mix-example support
+-   [ ] Use automatic command for .env replacement, something like (`ddev exec 'echo ${DDEV_PRIMARY_URL} && cat .env.example | sed -E \\'\s\/APP_URL=(.*)\/APP_URL=${DDEV_PRIMARY_URL}\/g\\'\ > .env'` is not working, see https://github.com/drud/ddev/issues/3636#issuecomment-1145743417)
+-   [ ] Create simple DDEV addon for `please`-command (https://github.com/drud/ddev-addon-template)
 
-- [Statamic Main Site](https://statamic.com)
-- [Statamic 3 Documentation][docs]
-- [Statamic 3 Core Package Repo][cms-repo]
-- [Statamic 3 Migrator](https://github.com/statamic/migrator)
-- [Statamic Discord][discord]
+## Resources
 
-[docs]: https://statamic.dev/
-[discord]: https://statamic.com/discord
-[contribution]: https://github.com/statamic/cms/blob/master/CONTRIBUTING.md
-[cms-repo]: https://github.com/statamic/cms
+See [My DDEV lab: Statamic](https://my-ddev-lab.mandrasch.eu/tutorials/cms-and-frameworks/statamic.html) for further info.
+
+## License
+
+Please be aware that Statamic is only free and open source for personal and hobby projects, see: [Statamic Licensing](https://statamic.dev/licensing)
