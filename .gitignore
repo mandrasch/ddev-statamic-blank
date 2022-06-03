@@ -16,3 +16,6 @@ yarn-error.log
 .DS_Store
 /.idea
 /.vscode
+
+# For this demo repo, we don't store users in git
+/users/*
