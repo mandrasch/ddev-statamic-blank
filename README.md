@@ -2,7 +2,9 @@
 
 Status: WIP
 
-[Statamic CMS](https://statamic.dev/) meets [DDEV](https://ddev.com/) & [Gitpod](https://gitpod.io/).
+[Statamic CMS](https://statamic.com/) meets [DDEV](https://ddev.com/) & [Gitpod](https://gitpod.io/).
+
+See [Statamic @ My DDEV lab](https://my-ddev-lab.mandrasch.eu/tutorials/cms-and-frameworks/statamic.html) for further info.
 
 **Launch in your browser via Gitpod:**
 
@@ -49,8 +51,6 @@ Technical details:
 -   [ ] Create simple DDEV addon for `please`-command (https://github.com/drud/ddev-addon-template)
 
 ## Resources
-
-See [My DDEV lab: Statamic](https://my-ddev-lab.mandrasch.eu/tutorials/cms-and-frameworks/statamic.html) for further info.
 
 ## License
 
