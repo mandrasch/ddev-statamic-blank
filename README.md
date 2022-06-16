@@ -21,24 +21,7 @@ See [Statamic @ My DDEV lab](https://my-ddev-lab.mandrasch.eu/tutorials/cms-and-
 
 ## How was this created?
 
-```bash
-ddev config --project-type=laravel --docroot=public --create-docroot
-ddev composer create statamic/statamic
-ddev exec cp .env.example .env
-ddev artisan key:generate
-ddev launch
-```
-
-Set the APP_URL to ddev project URL in .env, e.g. `APP_URL=https://ddev-statamic-blank.ddev.site`
-
-Support of the please command was added in `.ddev/commands/web/please`.
-
-Create first user:
-
-```bash
-ddev please make:user
-ddev launch /cp
-```
+See: https://my-ddev-lab.mandrasch.eu/tutorials/cms-and-frameworks/statamic.html
 
 Technical details:
 
