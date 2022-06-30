@@ -1,0 +1,15 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: test
+        field:
+          input_type: text
+          antlers: false
+          display: test
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+          read_only: false
