@@ -25,8 +25,6 @@ See my docs for all information:
 
 https://my-ddev-lab.mandrasch.eu/tutorials/cms-and-frameworks/statamic.html
 
-## Resources
-
 ## License
 
 Please be aware that Statamic is only free and open source for personal and hobby projects, see: [Statamic Licensing](https://statamic.dev/licensing)
