@@ -21,17 +21,9 @@ See [Statamic @ My DDEV lab](https://my-ddev-lab.mandrasch.eu/tutorials/cms-and-
 
 ## How was this created?
 
-See: https://my-ddev-lab.mandrasch.eu/tutorials/cms-and-frameworks/statamic.html
+See my docs for all information:
 
-Technical details:
-
--   `ddev composer create` is a wrapper around `composer create-project` which moves the files to the project root folder automatically after install
-
-## TODOs:
-
--   [ ] Add https://github.com/tyler36/ddev-browsersync#laravel-mix-example support
--   [ ] Use automatic command for .env replacement, something like (`ddev exec 'echo ${DDEV_PRIMARY_URL} && cat .env.example | sed -E \\'\s\/APP_URL=(.*)\/APP_URL=${DDEV_PRIMARY_URL}\/g\\'\ > .env'` is not working, see https://github.com/drud/ddev/issues/3636#issuecomment-1145743417)
--   [ ] Create simple DDEV addon for `please`-command (https://github.com/drud/ddev-addon-template)
+https://my-ddev-lab.mandrasch.eu/tutorials/cms-and-frameworks/statamic.html
 
 ## Resources
 
