@@ -21,36 +21,9 @@ See [Statamic @ My DDEV lab](https://my-ddev-lab.mandrasch.eu/tutorials/cms-and-
 
 ## How was this created?
 
-```bash
-ddev config --project-type=laravel --docroot=public --create-docroot
-ddev composer create statamic/statamic
-ddev exec cp .env.example .env
-ddev artisan key:generate
-ddev launch
-```
+See my docs for all information:
 
-Set the APP_URL to ddev project URL in .env, e.g. `APP_URL=https://ddev-statamic-blank.ddev.site`
-
-Support of the please command was added in `.ddev/commands/web/please`.
-
-Create first user:
-
-```bash
-ddev please make:user
-ddev launch /cp
-```
-
-Technical details:
-
--   `ddev composer create` is a wrapper around `composer create-project` which moves the files to the project root folder automatically after install
-
-## TODOs:
-
--   [ ] Add https://github.com/tyler36/ddev-browsersync#laravel-mix-example support
--   [ ] Use automatic command for .env replacement, something like (`ddev exec 'echo ${DDEV_PRIMARY_URL} && cat .env.example | sed -E \\'\s\/APP_URL=(.*)\/APP_URL=${DDEV_PRIMARY_URL}\/g\\'\ > .env'` is not working, see https://github.com/drud/ddev/issues/3636#issuecomment-1145743417)
--   [ ] Create simple DDEV addon for `please`-command (https://github.com/drud/ddev-addon-template)
-
-## Resources
+https://my-ddev-lab.mandrasch.eu/tutorials/cms-and-frameworks/statamic.html
 
 ## License
 
